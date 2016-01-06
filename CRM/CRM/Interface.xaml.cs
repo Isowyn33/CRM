@@ -20,31 +20,24 @@ namespace CRM
     /// </summary>
     public partial class Interface : Window
     {
-        private int IdClient;
-        private String NomClient;
-        private String PrenomClient;
-        private String AdresseClient;
-        private int CodePostalClient;
-        private int TelephoneClient;
-        private Client cli;
         private MainWindow mw;
 
 
         public Interface()
         {
             InitializeComponent();
+        }
+
+        public void Loaded()
+        {
+            mw = (MainWindow)this.Owner;
+
+            DGVlients.ItemsSource = mw.getListClient();
+
             
         }
 
-        public void Interface_Loaded()
-        {
-            NomClient = mw.nomClient;
-            tbId.Text = NomClient;
-        }
 
-        
-        
 
-        
     }
 }

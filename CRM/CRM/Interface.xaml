@@ -7,16 +7,25 @@
         mc:Ignorable="d"
         Title="Interface" Height="500" Width="1000">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <TextBox x:Name="tbId" Grid.Row="1" Grid.Column="1" />
+        <StackPanel>
+            <StackPanel>
+        <TabControl>
+                <TabItem Header="Clients">
+                        <DataGrid x:Name="DGVlients" AutoGenerateColumns="True"></DataGrid>
+                </TabItem>
+                <TabItem Header="Prospects">
+                        <DataGrid x:Name="DGProspects"></DataGrid>
+                    </TabItem>
+                <TabItem Header="Entretiens">
+                        <DataGrid x:Name="DGEntretiens"></DataGrid>
+                    </TabItem>
+        </TabControl>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+            <Button x:Name="btnAdd" Content="Ajouter" Width="100" HorizontalAlignment="Left"/>
+            <Button x:Name="btnUpdate" Content="Modifier" Width="100" />
+            <Button x:Name="btDelete" Content="Supprimer" Width="100" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
