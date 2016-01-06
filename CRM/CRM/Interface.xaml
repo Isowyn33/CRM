@@ -11,13 +11,38 @@
             <StackPanel>
         <TabControl>
                 <TabItem Header="Clients">
-                        <DataGrid x:Name="DGVlients" AutoGenerateColumns="True"></DataGrid>
+                        <DataGrid x:Name="DGVlients" DataContext="{Binding Source=Client}">
+                            <!--<DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding ID}"/>
+                                <DataGridTextColumn Header="Nom" />
+                                <DataGridTextColumn Header="Prenom" />
+                                <DataGridTextColumn Header="Adresse" />
+                                <DataGridTextColumn Header="Code Postal" />
+                                <DataGridTextColumn Header="Telephone" />
+                            </DataGrid.Columns>-->
+                        </DataGrid>
                 </TabItem>
                 <TabItem Header="Prospects">
-                        <DataGrid x:Name="DGProspects"></DataGrid>
+                        <DataGrid x:Name="DGProspects">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" />
+                            <DataGridTextColumn Header="Nom" />
+                            <DataGridTextColumn Header="Prenom" />
+                            <DataGridTextColumn Header="Adresse" />
+                            <DataGridTextColumn Header="Code Postal" />
+                            <DataGridTextColumn Header="Telephone" />
+                        </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
                 <TabItem Header="Entretiens">
-                        <DataGrid x:Name="DGEntretiens"></DataGrid>
+                        <DataGrid x:Name="DGEntretiens">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" />
+                                <DataGridTextColumn Header="Date" />
+                                <DataGridTextColumn Header="Client" />
+                                <DataGridTextColumn Header="Libellé"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </TabItem>
         </TabControl>
             </StackPanel>

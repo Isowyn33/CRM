@@ -54,17 +54,14 @@ namespace CRM
             server = tbServer.Text;
             dbName = tbdbName.Text;
             id = tbId.Text;
-            pass = tbPass.Text;
+            pass = pbPass.Password;
             String connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             dbName + ";" + "UID=" + id + ";" + "PASSWORD=" + pass + ";";
 
 
             connection = new MySqlConnection(connectionString);
-            
-
-            //stm = "SELECT Nom FROM client";
-            //da = new MySqlDataAdapter(stm, connection);
+           
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM client";
             connection.Open();
