@@ -10,38 +10,25 @@
         <StackPanel>
             <StackPanel>
         <TabControl>
-                <TabItem Header="Clients">
+                    <TabItem >
+                        <TabItem.Header>
+                            <Label Content="Clients" MouseLeftButtonDown="TabItem_Client" />
+                        </TabItem.Header>
                         <DataGrid x:Name="DGVlients" DataContext="{Binding Source=Client}">
-                            <!--<DataGrid.Columns>
-                                <DataGridTextColumn Header="Id" Binding="{Binding ID}"/>
-                                <DataGridTextColumn Header="Nom" />
-                                <DataGridTextColumn Header="Prenom" />
-                                <DataGridTextColumn Header="Adresse" />
-                                <DataGridTextColumn Header="Code Postal" />
-                                <DataGridTextColumn Header="Telephone" />
-                            </DataGrid.Columns>-->
                         </DataGrid>
                 </TabItem>
-                <TabItem Header="Prospects">
-                        <DataGrid x:Name="DGProspects">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" />
-                            <DataGridTextColumn Header="Nom" />
-                            <DataGridTextColumn Header="Prenom" />
-                            <DataGridTextColumn Header="Adresse" />
-                            <DataGridTextColumn Header="Code Postal" />
-                            <DataGridTextColumn Header="Telephone" />
-                        </DataGrid.Columns>
+                <TabItem>
+                        <TabItem.Header>
+                            <Label Content="Prospects" MouseLeftButtonDown="TabItem_Prospect"/>
+                        </TabItem.Header>
+                        <DataGrid x:Name="DGProspects" DataContext="{Binding Source=Prospect}">
                         </DataGrid>
                     </TabItem>
-                <TabItem Header="Entretiens">
-                        <DataGrid x:Name="DGEntretiens">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Id" />
-                                <DataGridTextColumn Header="Date" />
-                                <DataGridTextColumn Header="Client" />
-                                <DataGridTextColumn Header="Libellé"/>
-                            </DataGrid.Columns>
+                    <TabItem>
+                        <TabItem.Header>
+                            <Label Content="Entretiens" MouseLeftButtonDown="TabItem_Entretien"/>
+                        </TabItem.Header>
+                        <DataGrid x:Name="DGEntretiens" DataContext="{Binding Source=Historique}">
                         </DataGrid>
                     </TabItem>
         </TabControl>

@@ -6,19 +6,43 @@ using System.Threading.Tasks;
 
 namespace CRM
 {
-    class Historique
+   public class Historique
     {
         private int Id;
-        private DateTime Date;
-        private int IdClient;
+        private String Date;
         private String Libelle;
+        private int IdClientt;
         
-        public Historique(int theId, DateTime theDate, int theIdClient, String theLibelle)
+        public Historique(int theId, String theDate, int theIdClient, String theLibelle)
         {
             Id = theId;
             Date = theDate;
-            IdClient = theIdClient;
+            IdClientt = theIdClient;
             Libelle = theLibelle;
+        }
+
+        public int ID
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+
+        public String DATE
+        {
+            get { return Date; }
+            set { Date = value; }
+        }
+
+        public int IDCLIENT
+        {
+            get { return IdClientt; }
+            set { IdClientt = value; }
+        }
+
+        public String LIBELLE
+        {
+            get { return Libelle; }
+            set { Libelle = value; }
         }
 
     }

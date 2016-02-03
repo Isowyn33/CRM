@@ -28,13 +28,12 @@ namespace CRM
         DataGridTextColumn dgcAdresse = new DataGridTextColumn();
         DataGridTextColumn dgcCodePostal = new DataGridTextColumn();
         DataGridTextColumn dgcTel = new DataGridTextColumn();
-        
+        formulaireAjoutClient fac = new formulaireAjoutClient();
+        formulaireAjoutProspect fap = new formulaireAjoutProspect();
+
 
         public Interface()
         {
-            this.DataContext = client;
-            client = new ObservableCollection<Client>();
-            client.Add(new Client(0, "Murat", "Yoann", "rue de la péruche", 33500, 0548976515));
             InitializeComponent();
             
         }
@@ -46,11 +45,37 @@ namespace CRM
 
         //DGVlients.DataContext = mw.getListClient();
         DGVlients.ItemsSource = mw.getListClient();
+        DGProspects.ItemsSource = mw.getListProspect();
+        DGEntretiens.ItemsSource = mw.getListHistorique();
+        }
 
+        private void TabItem_Client(object sender, MouseButtonEventArgs e)
+        {
+            btnAdd.Click += AddClient_Click;
+            btnUpdate.Click += UpdateClient_Click;
+        }
+
+        private void UpdateClient_Click(object sender, RoutedEventArgs e)
+        {
+            fap.Show();
+        }
+
+        private void AddClient_Click(object sender, RoutedEventArgs e)
+        {
+            
+            fac.Show();
+        }
+
+        private void TabItem_Prospect(object sender, MouseButtonEventArgs e)
+        {
 
         }
 
+        private void TabItem_Entretien(object sender, MouseButtonEventArgs e)
+        {
 
-
+        }
     }
+
+    
 }

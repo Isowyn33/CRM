@@ -56,8 +56,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="formulaireAjoutProspect.xaml.cs">
+      <DependentUpon>formulaireAjoutProspect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="formulaireAjoutClient.xaml.cs">
+      <DependentUpon>formulaireAjoutClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Historique.cs" />
     <Compile Include="Prospect.cs" />
+    <Page Include="formulaireAjoutProspect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="formulaireAjoutClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

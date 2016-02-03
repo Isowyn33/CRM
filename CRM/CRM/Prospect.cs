@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRM
 {
-    class Prospect
+    public class Prospect
     {
         private int Id;
         private String Nom;
@@ -25,34 +25,40 @@ namespace CRM
             Telephone = theTelephone;
         }
 
-        public int getId()
+        public int ID
         {
-            return Id;
+            get { return Id; }
+            set { Id = value; }
         }
 
-        public String getNom()
+        public String NOM
         {
-            return Nom;
+            get { return Nom; }
+            set { Nom = value; }
         }
 
-        public String getPrenom()
+        public String PRENOM
         {
-            return Prenom;
+            get { return Prenom; }
+            set { Prenom = value; }
         }
 
-        public String getAdresse()
+        public String ADRESSE
         {
-            return Adresse;
+            get { return Adresse; }
+            set { Adresse = value; }
         }
 
-        public int getCodePostal()
+        public int CP
         {
-            return CodePostal;
+            get { return CodePostal; }
+            set { CodePostal = value; }
         }
 
-        public int getTelephone()
+        public int TEL
         {
-            return Telephone;
+            get { return Telephone; }
+            set { Telephone = value; }
         }
 
     }
