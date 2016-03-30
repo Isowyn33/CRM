@@ -41,7 +41,7 @@ namespace CRM
         public void Loaded()
         {
         mw = (MainWindow)this.Owner;
-
+            btnAdd.Click += AddClient_Click;
 
         //DGVlients.DataContext = mw.getListClient();
         DGVlients.ItemsSource = mw.getListClient();
@@ -51,6 +51,7 @@ namespace CRM
 
         private void TabItem_Client(object sender, MouseButtonEventArgs e)
         {
+            btnAdd.Click -= AddProspect_Click;
             btnAdd.Click += AddClient_Click;
             btnUpdate.Click += UpdateClient_Click;
         }
@@ -62,13 +63,18 @@ namespace CRM
 
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
-            
             fac.Show();
+        }
+
+        private void AddProspect_Click(object sender, RoutedEventArgs e)
+        {
+            fap.Show();
         }
 
         private void TabItem_Prospect(object sender, MouseButtonEventArgs e)
         {
-
+            btnAdd.Click -= AddClient_Click;
+            btnAdd.Click += AddProspect_Click;
         }
 
         private void TabItem_Entretien(object sender, MouseButtonEventArgs e)

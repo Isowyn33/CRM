@@ -94,6 +94,7 @@ namespace CRM
                 inter.Owner = this;
                 inter.Loaded();
                 inter.ShowDialog();
+                this.Hide();
             }
             else if (close == true)
             {
@@ -216,7 +217,9 @@ namespace CRM
                     MessageBox.Show("Connection réussie");
 
                     quit = true;
+                    this.Hide();
                 }
+                
                 this.Close();
             }
         }
